@@ -17,7 +17,7 @@ int main()
     // percorre todos os números de 3 a 10000 para procurar por números primos
     for (int i = 3; i < 10000; i++)
     {
-        int isntPrime = 0;
+        int isPrime = 1;
 
         // percorre todos os números do 2 até ele para ver se o número é divisível
         for (int j = 2; j <= i / 2; ++j)
@@ -25,12 +25,12 @@ int main()
             // se o número for divisível, não é primo
             if (i % j == 0)
             {
-                isntPrime = 1;
+                isPrime = 0;
                 break;
             }
         }
 
-        numbersPrimeValue[i] = isntPrime;
+        numbersPrimeValue[i] = isPrime;
     }
 
     for (int i = 0; i < 10000; i++)
